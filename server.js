@@ -30,6 +30,10 @@ app.use(
   })
 );
 
+app.use("/", (req, res) => {
+  res.send("Server running");
+});
+
 app.use("/api/user", require("./routes/userRoutes"));
 app.listen(port, () => {
   console.log("Server Running at", port);
